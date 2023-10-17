@@ -15,7 +15,6 @@ export const metadata = {
 export default async function HomePage() {
   return (
     <>
-      <h2>Hello World from BigCommerce and Next.js</h2>
       <ThreeItemGrid />
       <Suspense>
         <Carousel />
