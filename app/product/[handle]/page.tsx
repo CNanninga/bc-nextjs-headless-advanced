@@ -75,6 +75,7 @@ export default async function ProductPage({ params }: { params: { handle: string
 
   return (
     <>
+      <h1>The product’s ID is {product.id}</h1>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
