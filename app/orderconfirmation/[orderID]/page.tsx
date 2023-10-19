@@ -1,3 +1,4 @@
+import ClearCart from 'components/clear-cart';
 import OrderConfirmView from 'components/order/order-confirm-view';
 import { getOrderData } from 'utils/bigcommerce-api/get-order-data';
 
@@ -5,11 +6,14 @@ export default async function OrderConfirmationPage({ params }: { params: { orde
   const { orderID } = params;
   const orderData = await getOrderData(orderID);
 
-  return (
-    <div>
-        {orderData && 
-            <OrderConfirmView order={orderData} />
-        }
-    </div>
-  )
+    return (
+        <div>
+            {orderData && (
+                <>
+                    <OrderConfirmView order={orderData} />
+                    <ClearCart />
+                </>
+            )}
+        </div>
+    )
 }
